@@ -75,17 +75,86 @@ The project follows a comprehensive **data science lifecycle**:
 ---
 
 ### 5. 🤖 Predictive Modeling
+This section introduces forecasting techniques and unsupervised learning to uncover hidden sales patterns and enable data-driven decision-making. Three modeling approaches were applied:
 
-Basic predictive models were implemented to simulate future sales trends:
+📉 1. Sales Forecasting with Random Forest
+A powerful ensemble model was used to predict daily revenue based on engineered time-series features.
 
-- 🎯 **Objective**: Predict `total_revenue` 💰 based on time ⏳, product category ☕, and store location 📍  
-- 🔧 **Models Used**:
-  - 📏 `Linear Regression`: Baseline model
-  - 🌳 `Decision Tree`: Captures non-linear relationships
-- 📊 **Evaluation Metrics**:
-  - 📉 RMSE (Root Mean Squared Error)
-  - 📉 MAE (Mean Absolute Error)
-  - 📈 R² Score (Coefficient of determination)
+🧼 Preprocessing:
+
+Cleaned and aggregated daily sales data to ensure consistency.
+
+Extracted temporal features: day_of_week, month, etc.
+
+🧠 Model: RandomForestRegressor
+
+Trained on historical total_revenue patterns.
+
+Captured complex, non-linear trends across the dataset.
+
+📊 Evaluation:
+
+MAE (Mean Absolute Error) 📉
+
+R² Score (Coefficient of Determination) 📈
+
+🔍 Feature Importance:
+
+Analyzed which variables most influenced sales predictions.
+
+📈 Results:
+
+Plotted actual vs predicted revenue to evaluate model performance.
+
+⏳ 2. Time Series Forecasting with Prophet
+To capture seasonal trends and provide actionable forecasts, Facebook's Prophet model was applied:
+
+📦 Forecasted daily revenue for each store location independently.
+
+🔁 Modeled daily & weekly seasonality with multiplicative components.
+
+📆 Generated future revenue predictions for strategic planning.
+
+📉 Visual output showcased forecast confidence intervals and trend decomposition.
+
+🧩 3. Store Segmentation using K-Means Clustering
+Unsupervised learning helped to group stores based on sales patterns.
+
+🧮 Data Aggregation:
+
+Aggregated store-level metrics:
+
+avg_revenue
+
+total_revenue
+
+total_transaction_qty
+
+weekend_sales_ratio
+
+⚙️ Feature Scaling:
+
+Applied StandardScaler to normalize features for better clustering performance.
+
+📍 K-Means Clustering:
+
+Used k=2 to segment stores into 2 meaningful clusters, ideal for datasets with 3 store locations.
+
+🏷️ Cluster Assignment:
+
+Each store labeled with a cluster_id (e.g., 0, 1, 2).
+
+📊 Cluster Summary:
+
+Detailed breakdown of clusters by:
+
+Store Location 📍
+
+Average Revenue 💰
+
+Total Transactions 📦
+
+✅ These models collectively enable sales forecasting, trend identification, and market segmentation — all crucial for scaling coffee shop operations strategically.
 
 > These models serve as a foundation to understand key revenue drivers and simulate sales scenarios 🔮.
 
