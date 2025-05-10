@@ -1,4 +1,4 @@
-##### ☕ Coffee Shop Sales Analysis Dashboard 📊
+##☕ Coffee Shop Sales Analysis Dashboard 📊
 
 An end-to-end data analysis and visualization project built using **Python** 🐍, focusing on **sales performance**, **product trends**, and **store insights** from transactional data collected across multiple locations of a coffee shop chain.
 
@@ -74,7 +74,7 @@ The project follows a comprehensive **data science lifecycle**:
 
 ---
 
-### ### 5. 🤖 Predictive Modeling
+### 5. 🤖 Predictive Modeling
 
 This section introduces forecasting techniques and unsupervised learning to uncover hidden sales patterns and enable data-driven decision-making. Three modeling approaches were applied:
 
