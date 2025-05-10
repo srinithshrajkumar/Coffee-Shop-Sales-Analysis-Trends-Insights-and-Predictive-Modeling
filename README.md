@@ -1,4 +1,4 @@
-# ☕ Coffee Shop Sales Analysis Dashboard 📊
+##### ☕ Coffee Shop Sales Analysis Dashboard 📊
 
 An end-to-end data analysis and visualization project built using **Python** 🐍, focusing on **sales performance**, **product trends**, and **store insights** from transactional data collected across multiple locations of a coffee shop chain.
 
@@ -74,87 +74,77 @@ The project follows a comprehensive **data science lifecycle**:
 
 ---
 
-### 5. 🤖 Predictive Modeling
+### ### 5. 🤖 Predictive Modeling
+
 This section introduces forecasting techniques and unsupervised learning to uncover hidden sales patterns and enable data-driven decision-making. Three modeling approaches were applied:
 
-📉 1. Sales Forecasting with Random Forest
+---
+
+#### 📉 1. Sales Forecasting with Random Forest
+
 A powerful ensemble model was used to predict daily revenue based on engineered time-series features.
 
-🧼 Preprocessing:
+- 🧼 **Preprocessing**:
+  - Cleaned and aggregated daily sales data to ensure consistency.
+  - Extracted temporal features: `day_of_week`, `month`, etc.
 
-Cleaned and aggregated daily sales data to ensure consistency.
+- 🧠 **Model**: `RandomForestRegressor`
+  - Trained on historical `total_revenue` patterns.
+  - Captured complex, non-linear trends across the dataset.
 
-Extracted temporal features: day_of_week, month, etc.
+- 📊 **Evaluation**:
+  - **MAE (Mean Absolute Error)** 📉
+  - **R² Score (Coefficient of Determination)** 📈
 
-🧠 Model: RandomForestRegressor
+- 🔍 **Feature Importance**:
+  - Analyzed which variables most influenced sales predictions.
 
-Trained on historical total_revenue patterns.
+- 📈 **Results**:
+  - Plotted **actual vs predicted revenue** to evaluate model performance.
 
-Captured complex, non-linear trends across the dataset.
+---
 
-📊 Evaluation:
+#### ⏳ 2. Time Series Forecasting with Prophet
 
-MAE (Mean Absolute Error) 📉
-
-R² Score (Coefficient of Determination) 📈
-
-🔍 Feature Importance:
-
-Analyzed which variables most influenced sales predictions.
-
-📈 Results:
-
-Plotted actual vs predicted revenue to evaluate model performance.
-
-⏳ 2. Time Series Forecasting with Prophet
 To capture seasonal trends and provide actionable forecasts, Facebook's Prophet model was applied:
 
-📦 Forecasted daily revenue for each store location independently.
+- 📦 Forecasted **daily revenue** for each store location independently.
+- 🔁 Modeled **daily & weekly seasonality** with **multiplicative** components.
+- 📆 Generated **future revenue predictions** for strategic planning.
+- 📉 Visual output showcased **forecast confidence intervals** and **trend decomposition**.
 
-🔁 Modeled daily & weekly seasonality with multiplicative components.
+---
 
-📆 Generated future revenue predictions for strategic planning.
+#### 🧩 3. Store Segmentation using K-Means Clustering
 
-📉 Visual output showcased forecast confidence intervals and trend decomposition.
-
-🧩 3. Store Segmentation using K-Means Clustering
 Unsupervised learning helped to group stores based on sales patterns.
 
-🧮 Data Aggregation:
+- 🧮 **Data Aggregation**:
+  - Aggregated store-level metrics:
+    - `avg_revenue`
+    - `total_revenue`
+    - `total_transaction_qty`
+    - `weekend_sales_ratio`
 
-Aggregated store-level metrics:
+- ⚙️ **Feature Scaling**:
+  - Applied `StandardScaler` to normalize features for better clustering performance.
 
-avg_revenue
+- 📍 **K-Means Clustering**:
+  - Used `k=2` to segment stores into **2 meaningful clusters**, ideal for datasets with 3 store locations.
 
-total_revenue
+- 🏷️ **Cluster Assignment**:
+  - Each store labeled with a `cluster_id` (e.g., `0`, `1`, `2`).
 
-total_transaction_qty
+- 📊 **Cluster Summary**:
+  - Detailed breakdown of clusters by:
+    - Store Location 📍
+    - Average Revenue 💰
+    - Total Transactions 📦
 
-weekend_sales_ratio
+---
 
-⚙️ Feature Scaling:
+✅ These models collectively enable **sales forecasting**, **trend identification**, and **market segmentation** — all crucial for scaling coffee shop operations strategically.
 
-Applied StandardScaler to normalize features for better clustering performance.
-
-📍 K-Means Clustering:
-
-Used k=2 to segment stores into 2 meaningful clusters, ideal for datasets with 3 store locations.
-
-🏷️ Cluster Assignment:
-
-Each store labeled with a cluster_id (e.g., 0, 1, 2).
-
-📊 Cluster Summary:
-
-Detailed breakdown of clusters by:
-
-Store Location 📍
-
-Average Revenue 💰
-
-Total Transactions 📦
-
-✅ These models collectively enable sales forecasting, trend identification, and market segmentation — all crucial for scaling coffee shop operations strategically.
 
 > These models serve as a foundation to understand key revenue drivers and simulate sales scenarios 🔮.
 
