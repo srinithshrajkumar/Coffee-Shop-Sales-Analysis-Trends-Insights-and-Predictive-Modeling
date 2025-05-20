@@ -1,4 +1,4 @@
-# ☕ Coffee Shop Sales Analysis: Trends, Insights, and Predictive Modeling 
+# ☕ Coffee Shop Sales Analysis: Data-Driven Insights & Forecasting
 
 An end-to-end data analysis and visualization project built using **Python** 🐍, focusing on **sales performance**, **product trends**, and **store insights** from transactional data collected across multiple locations of a coffee shop chain.
 
